@@ -47,7 +47,7 @@ module.exports = (app) => {
   );
   //----------FRONTEND CONNECTION-----------///
   app.use((req,res,next)=>{
-    res.sendFile(__dirname+"../public/index.html")
+    res.sendFile(path.join(__dirname, "..", "public", "index.html"))
     })
     
   // ℹ️ Middleware that adds a "req.session" information and later to check that you are who you say you are 😅
