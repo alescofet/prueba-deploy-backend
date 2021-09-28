@@ -131,7 +131,7 @@ router.get("/logout", isLoggedIn, (req, res) => {
 });
 
 router.get('/logged-user', isLoggedIn, (req, res) => {
-  res.json(req.session.user)
+  res.send(req.session.user)
 })
 
 module.exports = router;
