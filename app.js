@@ -16,9 +16,5 @@ app.use("/sv", index);
 const authRoutes = require("./routes/auth");
 app.use("/sv/auth", authRoutes);
 
-require("./error-handling")(app);
-
-
-
 
 module.exports = app;
