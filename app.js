@@ -7,7 +7,7 @@ const express = require("express");
 const app = express();
 
 require("./config")(app);
-/* require('./config/cors.config')(app) */
+require('./config/cors.config')(app)
 
 
 const index = require("./routes/index");

@@ -49,15 +49,7 @@ module.exports = (app) => {
   app.use((req,res,next)=>{
     res.sendFile(__dirname+"/public/index.html")
     })
-  // ---------------CORS-----------//
-  app.use(
-    cors({
-      methods: ['GET', 'POST','PUT','DELETE'],
-      credentials: true,
-      origin: ['http://localhost:3000'],
-    })
-  )
-
+    
   // ℹ️ Middleware that adds a "req.session" information and later to check that you are who you say you are 😅
   app.use(
     session({

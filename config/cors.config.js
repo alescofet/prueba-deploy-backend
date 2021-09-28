@@ -1,4 +1,4 @@
-/* const cors = require('cors')
+const cors = require('cors')
 
 const whitelist = [process.env.DOMAIN_LOCAL, process.env.REACT_APP_BASE_URL]
 
@@ -14,4 +14,4 @@ const corsOptions = {
 
 module.exports = app => {
     app.use(cors(corsOptions))
-} */
+}
