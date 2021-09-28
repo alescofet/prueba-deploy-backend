@@ -45,11 +45,6 @@ module.exports = (app) => {
   app.use(
     favicon(path.join(__dirname, "..", "public", "images", "favicon.ico"))
   );
-  //----------FRONTEND CONNECTION-----------///
-  app.use((req,res,next)=>{
-    res.sendFile(path.join(__dirname, "..", "public", "index.html"))
-    })
-    
   // ℹ️ Middleware that adds a "req.session" information and later to check that you are who you say you are 😅
   app.use(
     session({
@@ -61,4 +56,9 @@ module.exports = (app) => {
       }),
     })
   );
+  //----------FRONTEND CONNECTION-----------///
+  app.use((req,res,next)=>{
+    res.sendFile(path.join(__dirname, "..", "public", "index.html"))
+    })
+    
 };
