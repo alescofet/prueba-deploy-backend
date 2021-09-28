@@ -11,10 +11,10 @@ require('./config/cors.config')(app)
 
 
 const index = require("./routes/index");
-app.use("/", index);
+app.use("/sv", index);
 
 const authRoutes = require("./routes/auth");
-app.use("/auth", authRoutes);
+app.use("/sv/auth", authRoutes);
 require("./error-handling")(app);
 
 //----------FRONTEND CONNECTION-----------///
