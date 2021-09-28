@@ -17,9 +17,7 @@ const authRoutes = require("./routes/auth");
 app.use("/sv/auth", authRoutes);
 require("./error-handling")(app);
 
-//----------FRONTEND CONNECTION-----------///
-app.use((req,res,next)=>{
-    res.sendFile(__dirname+"/public/index.html")
-    })
+
+
 
 module.exports = app;
