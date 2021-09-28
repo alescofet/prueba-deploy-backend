@@ -107,7 +107,8 @@ router.post("/login", (req, res, next) => {
         }
         req.session.user = user;
         // req.session.user = user._id; // ! better and safer but in this case we saving the entire user object
-        return res.json({ res })
+        res.header("Access-Control-Allow-Origin", "*");
+        return (res.json({ res }))
       });
     })
 
